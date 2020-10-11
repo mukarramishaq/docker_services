@@ -3,9 +3,20 @@ services:
   postgres:
     image: "postgres" # use latest official postgres version
     restart: always
+    ports:
+      - 5432:5432
     env_file:
       - postgres.env # configure postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    env_file: 
+      - sqlserver.env
+    ports:
+      - "1433:1433"
+    volumes: 
+      - sqlserver-data:/var/opt/mssql/data
 volumes:
   postgres-data: # named volumes can be managed easier using docker-compose
+  sqlserver-data:
