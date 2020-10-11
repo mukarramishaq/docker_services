@@ -5,10 +5,20 @@ It uses [Dokcer](https://docs.docker.com/get-started/overview/ "Docker overview"
 
 - [Docker Services](#docker-services)
   - [Available Services](#available-services)
+  - [Service Names](#service-names)
   - [How To?](#how-to)
 
 ## Available Services
-* Postgres
+
+- Postgres
+- MSSQL Server
+
+## Service Names
+
+Followings are the exact name of the above [available services](#available-services). These names are required to run the service as described in the [How To?](#how-to) section.
+
+- postgres
+- sqlserver
 
 ## How To?
 Make sure, you have [Docker](https://docs.docker.com/get-docker/ "Get Docker")  and [docker-compose](https://docs.docker.com/compose/install/ "Install Docker Compose") installed on your system.
