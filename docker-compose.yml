@@ -11,6 +11,7 @@ services:
       - postgres-data:/var/lib/postgresql/data/ # persist data even if container shuts down
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2017-latest
+    restart: always
     env_file: 
       - sqlserver.env
     ports:
